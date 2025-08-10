@@ -9,6 +9,7 @@ import ViewTrip from './view-trip/[tripId]/index.jsx'
 import { Toaster } from 'sonner';
 import MyTrips from './my-trips/index.jsx';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,10 +33,12 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_CLIENT_ID}>
-    <Header />
-    <Toaster />
-    <RouterProvider router={router} />
-    </GoogleOAuthProvider>
+    <ErrorBoundary>
+      <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_CLIENT_ID}>
+        <Header />
+        <Toaster />
+        <RouterProvider router={router} />
+      </GoogleOAuthProvider>
+    </ErrorBoundary>
   </StrictMode>,
 )

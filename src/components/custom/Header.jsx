@@ -38,7 +38,7 @@ function Header() {
 
   const GetUserProfile = (tokenInfo) => {
     axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${tokenInfo?.access_token}`, {
-      header: {
+      headers: {
         Authorization: `Bearer ${tokenInfo?.access_token}`,
         Accept: 'Application/json'
       }
@@ -55,7 +55,7 @@ function Header() {
     <div className='p-2 shadow-lg flex justify-between items-center px-5'
       style={{ zIndex: 2 }}
     >
-      <img src='/assets/logo.svg' width={150} />
+      <img src='/assets/travelwise-logo.png' width={120} height={40} alt="TravelWise AI Logo" style={{ objectFit: 'contain' }} />
 
       <div>
         {user ?
@@ -63,12 +63,12 @@ function Header() {
           <div className='flex items-center gap-3'>
 
             <a href="/create-trip">
-              <Button variant="outline" className="bg-[#462F26] text-white rounded  hover:bg-[#805545] hover:text-white hover:border-[#805545] rounded-full">+ Create Trip</Button>
+              <Button variant="outline" className="bg-[#2563eb] text-white rounded hover:bg-[#3b82f6] hover:text-white hover:border-[#3b82f6] rounded-full">+ Create Trip</Button>
             </a>
 
 
             <a href="/my-trips">
-              <Button variant="outline" className="bg-[#462F26] text-white rounded  hover:bg-[#805545] hover:text-white hover:border-[#805545] rounded-full">My Trips</Button>
+              <Button variant="outline" className="bg-[#2563eb] text-white rounded hover:bg-[#3b82f6] hover:text-white hover:border-[#3b82f6] rounded-full">My Trips</Button>
             </a>
 
             <Popover>
@@ -93,10 +93,10 @@ function Header() {
         }
 
         <Dialog open={openDialog}>
-          <DialogContent>
+          <DialogContent setOpenDialog={setOpenDialog}>
             <DialogHeader>
               <DialogDescription>
-                <img src="/assets/logo.svg" width={150} />
+                <img src="/assets/travelwise-logo.png" width={120} height={40} alt="TravelWise AI Logo" style={{ objectFit: 'contain' }} />
 
                 <DialogClose onClick={() => {
                   console.log('Closing dialog');
@@ -111,7 +111,7 @@ function Header() {
 
                 <Button
                   onClick={login}
-                  className="w-full mt-5 bg-[#462F26] text-white hover:border-[#291813] flex gap-2 items-center">
+                  className="w-full mt-5 bg-[#2563eb] text-white hover:border-[#1e40af] flex gap-2 items-center">
 
                   <FcGoogle className="w-6" />
                   Sign In With Google
