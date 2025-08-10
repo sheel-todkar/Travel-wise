@@ -1,6 +1,7 @@
 # TravelWise - AI Travel Planner 🏜🗺
 
 ## Description
+link = https://travel-wises.netlify.app/
 
 TravelWise is a travel planning application designed to help users create personalized itineraries. By leveraging AI, it suggests hotel and activity options based on the users' preferences to simplify their travel planning experience.
 
