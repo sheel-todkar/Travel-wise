@@ -1,14 +1,14 @@
-# Navigo - AI Travel Planner 🏜🗺
+# TravelWise - AI Travel Planner 🏜🗺
 
 ## Description
 
-Navigo is a travel planning application designed to help users create personalized itineraries. By leveraging AI, it suggests hotel and activity options based on the users' preferences to simplify their travel planning experience.
+TravelWise is a travel planning application designed to help users create personalized itineraries. By leveraging AI, it suggests hotel and activity options based on the users' preferences to simplify their travel planning experience.
 
 ## Features
 
 - Personalized daily travel itineraries with activity suggestions and directions
 - Hotel recommendations with Google Maps integration
-- View of previously, generated trips
+- View of previously generated trips
 - Login with Google Authentication 
 
 ## Technologies
@@ -24,11 +24,11 @@ Navigo is a travel planning application designed to help users create personaliz
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/ai-travel-planner.git
+    git clone https://github.com/sheel-todkar/Travel-wise.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd ai-travel-planner
+    cd Travel-wise
     ```
 3. Install dependencies:
     ```bash
@@ -36,10 +36,8 @@ Navigo is a travel planning application designed to help users create personaliz
     ```
 4. Start the application:
     ```bash
-    npm start
-     ```
+    npm run dev
+    ```
 
-## Video Demo: 
 
-https://github.com/user-attachments/assets/0714cc57-f2d7-4e2f-ad7c-8b1b7c0a400c
-
+    npm run dev
